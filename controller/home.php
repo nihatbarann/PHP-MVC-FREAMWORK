@@ -1,13 +1,8 @@
 <?php 
-
  class home extends Controller{
-    use database;
-    
-    function index(){
-
-        $this->view('home');
-
-
+    use imageUpload;
+    public function index(){
+$this->view('home',"");
     }
 }
 

@@ -19,13 +19,5 @@
 </head>
 <body>
 
-<?php 
-echo "2312";
-?>
-
-
-
-
-
 </body>
 </html>

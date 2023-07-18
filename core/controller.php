@@ -1,7 +1,7 @@
 <?php
 
 class Controller{
-public function view($page){
+public function view($page,$data=[]){
             if(file_exists(ROOT."/view/".$page.".view.php")){
                 return require(ROOT."/view/".$page.".view.php"); 
             }
@@ -10,7 +10,7 @@ public function view($page){
             }
 }
 public function loadModel($model){
-            if(file_exists(ROOT."/model/".$model."model.php")){
+            if(file_exists(ROOT."/model/".$model.".model.php")){
             
             $model = new $model();
             return $model;
