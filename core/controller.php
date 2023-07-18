@@ -1,4 +1,5 @@
 <?php
+defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
 
 class Controller{
 public function view($page,$data=[]){

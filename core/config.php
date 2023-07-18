@@ -1,6 +1,6 @@
 <?php
+defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
 
-Define('APP','FORUM');
 Define('DBNAME','deneme');
 Define('USERNAME','root');
 Define('PASSWORD','');

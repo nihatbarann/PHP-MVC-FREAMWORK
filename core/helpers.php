@@ -1,4 +1,6 @@
 <?php
+defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
+
     function showArray($stuff){
         echo "<pre>";
         print_r($stuff);
@@ -46,6 +48,25 @@
       else{
          return false;
       }
+    }
+
+    function alertMessage($msg,$type){
+          return "<div class='alert alert-$type' role='alert'>".$msg."</div>";
+   }
+
+    function removeFile($filename,$folder=ROOT."/assets/images/"){
+
+         if(file_exists($folder.$filename)){
+
+            unlink($folder.$filename);
+            echo "Dosya başarı ile silindi";
+            return true;
+         }
+         else {
+           Echo "Dosya bulunamadı";
+            return false;
+
+         }
     }
         
 
