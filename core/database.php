@@ -5,7 +5,7 @@ defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
 
    public function db_connect(){
             try {
-                $db=NEW PDO("mysql:host=localhost;dbname=".DBNAME.";charset=utf8;",USERNAME,PASSWORD);
+                $db=NEW PDO("mysql:host=".HOST.";dbname=".DBNAME.";charset=utf8;",USERNAME,PASSWORD);
                 return $db;
             } catch (PDOException $th) {
                 Echo $th;

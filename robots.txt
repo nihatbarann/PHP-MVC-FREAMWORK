@@ -1,2 +1,11 @@
+#tüm sayfaların phpmyadmin yolunu taramasını engelleme 
 User-agent: *
-Disallow: /admin/
+Disallow: /phpmyadmin/
+
+#kotü botların sayfayı taramasını engelleme
+User-agent: BadBot
+Disallow: /
+
+
+# sitenin haritasını takip etme
+Sitemap: https://www.example.com/sitemap.xml

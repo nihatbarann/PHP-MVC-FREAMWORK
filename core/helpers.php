@@ -1,6 +1,33 @@
 <?php
 defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
 
+
+function seo($title)
+{
+    // Türkçe karakterleri değiştir
+    $search = array('Ç', 'İ', 'I', 'Ğ', 'Ü', 'Ş', 'Ö', 'ç', 'ı', 'ğ', 'ü', 'ş', 'ö', ' ');
+    $replace = array('c', 'i', 'i', 'g', 'u', 's', 'o', 'c', 'i', 'g', 'u', 's', 'o', '-');
+    $title = str_replace($search, $replace, $title);
+
+    // Alfanümerik ve - harici karakterleri kaldır
+    $title = preg_replace("/[^a-zA-Z0-9\-]/", '', $title);
+
+    // Birden fazla - karakterini tek bir - ile değiştir
+    $title = preg_replace('/-+/', '-', $title);
+
+    // Başında ve sonunda - karakterini kaldır
+    $title = trim($title, '-');
+
+    // Tüm harfleri küçük harf yap
+    $title = strtolower($title);
+
+    // URL'yi döndür
+    return $title;
+}
+
+
+
+
     function showArray($stuff){
         echo "<pre>";
         print_r($stuff);
@@ -8,14 +35,17 @@ defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
     }
 
     function post($post){
-    if(isset($_POST[$post]))
-     {
-        return $_POST[$post] ;
-     }
-      else{
-        return null;
-     } 
 
+    if(isset($_POST[$post])){
+      $return=trim($_POST[$post]);
+      $return=htmlspecialchars($return);
+      return $return;
+    }
+     else
+     { return null;
+
+     }
+       
     }
     function get($get){
         if(isset($_GET[$get]))
@@ -27,12 +57,6 @@ defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
          } 
     }
         
-    function redirect($path){
-
-     header("Location:".ROOT.$path);
-     die;
-
-    }
 
 
     function setSession($key,$value){

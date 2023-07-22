@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>404 HTML Template by Colorlib</title>
+<title>404</title>
 
 <style id="" media="all">/* vietnamese */
 @font-face {
@@ -119,34 +119,18 @@
 
 </style>
 
-<link type="text/css" rel="stylesheet" href="css/style.css" />
-
-
-<!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
 <meta name="robots" content="noindex, follow">
 </head>
 <body>
 <div id="notfound">
 <div class="notfound">
 <div class="notfound-404">
-<h3>Oops! Page not found</h3>
+<h3>Oops! Sayfa bulunamadı</h3>
 <h1><span>4</span><span>0</span><span>4</span></h1>
 </div>
-<h2>we are sorry, but the page you requested was not found</h2>
+<h2>Üzgünüz, Belirtiğiniz sayfa bulunamadı.</h2>
 </div>
 </div>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-23581568-13');
-</script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v2cb3a2ab87c5498db5ce7e6608cf55231689030342039" integrity="sha512-DI3rPuZDcpH/mSGyN22erN5QFnhl760f50/te7FTIYxodEF8jJnSFnfnmG/c+osmIQemvUrnBtxnMpNdzvx1/g==" data-cf-beacon='{"rayId":"7e83c3eb2baaa1ce","token":"cd0b4b3a733644fc843ef0b185f98241","version":"2023.4.0","si":100}' crossorigin="anonymous"></script>
 </body>
 </html>

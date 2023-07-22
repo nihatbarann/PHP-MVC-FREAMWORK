@@ -9,6 +9,7 @@ class app{
 
    public function __construct(){
         $url=$this->splitUrl();
+       
         if(file_exists(ROOT."/controller/$url[0].php")){    
                     $this->class=$url[0];
                     unset($url[0]);
@@ -26,7 +27,12 @@ class app{
                             $this->method=$url[1];
                             unset($url[1]);
                     }
-        }   
+                    else{
+                      require(ROOT."/view/404.php");
+                      exit;
+                    }   
+        }
+       
           if(is_array($url)){
             $this->param=(array_values($url));
           } 
@@ -40,9 +46,9 @@ function splitUrl(){
     
         return $url;
         }
-        else {
-              return ['home'];  
-                  }
+    else {
+           return ['home'];
+        }
 }
 }
 ?>
