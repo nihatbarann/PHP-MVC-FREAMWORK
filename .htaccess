@@ -16,7 +16,7 @@ Options -Indexes
 
 
 #htaccess dosyası ve php ini dosyasının güvenliğini alma girişleri yasaklama
-#RewriteRule ^(php\.ini|\.htaccess) - [NC, F]
+#git RewriteRule ^(php\.ini|\.htaccess) - [NC, F]
 
 
 #hotlink belirttiğimiz içeriğin başka sitelerde kullanımını yasaklama

@@ -92,6 +92,36 @@ function seo($title)
 
          }
     }
+
+     function getClientIp() {
+      return $_SERVER['REMOTE_ADDR'];
+  }
+
+    function redirect($url) {
+    header("Location: " .URL. $url);
+    exit;
+}
+
+  function generateRandomString($length = 10) {
+  $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  $randomString = '';
+  for ($i = 0; $i < $length; $i++) {
+      $randomString .= $characters[rand(0, strlen($characters) - 1)];
+  }
+  return $randomString;
+}
+
+
+function addCSRFToken()
+{
+    $token = generateRandomString(32);
+    $_SESSION['csrf_token'] = $token;
+    return '<input type="hidden" name="csrf_token" value="' . $token . '">';
+}
+
+
+
+
         
 
 

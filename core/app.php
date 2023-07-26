@@ -1,7 +1,7 @@
 <?php
 defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
 
-class app{
+class App{
 
     private $class="home";
     private $method="index";
