@@ -2,8 +2,7 @@
 defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
 
 
-function seo($title)
-{
+   function seo($title){
     // Türkçe karakterleri değiştir
     $search = array('Ç', 'İ', 'I', 'Ğ', 'Ü', 'Ş', 'Ö', 'ç', 'ı', 'ğ', 'ü', 'ş', 'ö', ' ');
     $replace = array('c', 'i', 'i', 'g', 'u', 's', 'o', 'c', 'i', 'g', 'u', 's', 'o', '-');
@@ -23,10 +22,7 @@ function seo($title)
 
     // URL'yi döndür
     return $title;
-}
-
-
-
+    }
 
     function showArray($stuff){
         echo "<pre>";
@@ -57,8 +53,6 @@ function seo($title)
          } 
     }
         
-
-
     function setSession($key,$value){
       $_SESSION[$key]=$value;
       if(isset($_SESSION[$key])){
@@ -76,26 +70,11 @@ function seo($title)
 
     function alertMessage($msg,$type){
           return "<div class='alert alert-$type' role='alert'>".$msg."</div>";
-   }
-
-    function removeFile($filename,$folder=ROOT."/assets/images/"){
-
-         if(file_exists($folder.$filename)){
-
-            unlink($folder.$filename);
-            echo "Dosya başarı ile silindi";
-            return true;
-         }
-         else {
-           Echo "Dosya bulunamadı";
-            return false;
-
-         }
     }
 
      function getClientIp() {
       return $_SERVER['REMOTE_ADDR'];
-  }
+     }
 
     function redirect($url) {
     header("Location: " .URL. $url);

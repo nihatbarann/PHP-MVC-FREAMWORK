@@ -6,13 +6,19 @@ RewriteCond %{REQUEST_FILENAME} !-d
 #seo 
 RewriteRule ^(.*)$    /PHP-MVC-FREAMWORK/index.php?url=$1 [L,NC,QSA]
 
-
 #hata sayfalarını yonlendirmesini 
 ErrorDocument 403 /PHP-MVC-FREAMWORK/view/404.php
 ErrorDocument 404 /PHP-MVC-FREAMWORK/view/404.php
 
+#sitenizi yeni sitenize yönlendirme
+#Redirect 301 / http://www.youtube.com [NC, L]
+
 #sunucunuzda klasör içerisini listelenmesini engeller
 Options -Indexes
+
+#Ana sayfa belirleme ve değiştirme
+DirectoryIndex index.php [F]
+
 
 
 #htaccess dosyası ve php ini dosyasının güvenliğini alma girişleri yasaklama
@@ -33,16 +39,9 @@ Options -Indexes
 #RewriteCond %{HTTP_HOST} ^sifirdanphp.site [NC]
 #RewriteRule ^(.*)$ http://www.sifirdanphp.site/$1 [L,R=301,NC]
 
-#sitenizi yeni sitenize yönlendirme
-#Redirect 301 / http://www.youtube.com [NC, L]
-
 #https olana yönlendirme
 #RewriteCond %{HTTPS} !on
 #RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-#Ana sayfa belirleme ve değiştirme
-#DirectoryIndex default.php [F]
-
 
 #Zararlı botları sitenize girişini yasaklama
 #RewriteCond %{HTTP_USER_AGENT} ^BlackWidow [OR]
@@ -73,13 +72,5 @@ Options -Indexes
 #php uzantısını kullanmadan sayfaların açılmasını sağlar
 #RewriteCond %{REQUEST_FILENAME} !-f
 #RewriteRule ^([^\.]+)$ $1.php [NC,L]
-
-#index.php için özel isim belirleme
-#RewriteRule ^main index.php [NC, L]
-#RewriteRule ^custom default.php [NC, L]
-
-#index.php kısmını engelleme
-#RewriteCond %{THE_REQUEST} ^.*/index.php
-#RewriteRule ^(.*)index.php$ http://www.sifirdanphp.site/$1 [R=301,L]
 
 
