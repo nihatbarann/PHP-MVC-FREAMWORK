@@ -4,12 +4,12 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 
 #seo 
-RewriteRule ^(.*)$    /phpfreamwork/index.php?url=$1 [L,NC,QSA]
+RewriteRule ^(.*)$    /PHP-MVC-FREAMWORK/index.php?url=$1 [L,NC,QSA]
 
 
 #hata sayfalarını yonlendirmesini 
-ErrorDocument 403 /phpfreamwork/view/404.php
-ErrorDocument 404 /phpfreamwork/view/404.php
+ErrorDocument 403 /PHP-MVC-FREAMWORK/view/404.php
+ErrorDocument 404 /PHP-MVC-FREAMWORK/view/404.php
 
 #sunucunuzda klasör içerisini listelenmesini engeller
 Options -Indexes

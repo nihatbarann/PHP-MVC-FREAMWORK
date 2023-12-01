@@ -6,6 +6,3 @@ Disallow: /phpmyadmin/
 User-agent: BadBot
 Disallow: /
 
-
-# sitenin haritasını takip etme
-Sitemap: https://www.example.com/sitemap.xml
