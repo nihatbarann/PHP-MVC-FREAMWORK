@@ -23,7 +23,7 @@ defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
 
 }
 
-    public function read($query,$data=""){
+    public function read($query,$data=[]){
       
        $stm=$this->db->prepare($query);
          $stm->execute($data);
@@ -37,7 +37,7 @@ defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
     
     }
 
-    public function allRead($query,$data=""){
+    public function allRead($query,$data=[]){
        $stm=$this->db->prepare($query);
          $stm->execute();
          $rows=$stm->fetchAll(PDO::FETCH_ASSOC);    

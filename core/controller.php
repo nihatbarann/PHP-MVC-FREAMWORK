@@ -12,9 +12,10 @@ public function view($page,$data=[]){
 }
 public function loadModel($model){
             if(file_exists(ROOT."/model/".$model.".model.php")){
-            
-            $model = new $model();
-            return $model;
+                
+                    require(ROOT."/view/".$model.".view.php"); 
+                    $model = new $model();
+                    return $model;
             }
             return false;
             }

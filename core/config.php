@@ -2,7 +2,7 @@
 defined('APP') or exit('Klasöre Erişim Yetkiniz yok');
 
 Define('HOST','localhost');
-Define('DBNAME','deneme');
+Define('DBNAME','');
 Define('USERNAME','root');
 Define('PASSWORD','');
 
